@@ -1,0 +1,18 @@
+language: python
+
+python:
+  - 2.7
+
+# env:
+#   global:
+#     - FOO=FUBU
+
+#   matrix:
+#     - M1=ONE
+#     - M2=TWO
+
+build:
+  ci:
+    - echo "+++++ Installing shunit +++++"
+    - apt-get install shunit2
+    - shunit2
