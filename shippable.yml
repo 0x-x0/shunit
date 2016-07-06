@@ -15,4 +15,4 @@ build:
   ci:
     - echo "+++++ Installing shunit +++++"
     - apt-get install shunit2
-    - shunit2
+    - ./firstTest.sh
