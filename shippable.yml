@@ -16,3 +16,7 @@ build:
     - echo "+++++ Installing shunit +++++"
     - apt-get install shunit2
     - ./firstTest.sh
+    - sudo apt-get install stress
+    - echo "starting the stress test"
+    - stress -t 10 -m 20 --vm-hang 5
+    - echo "finished the stress test"
