@@ -11,10 +11,10 @@
 
 #!/bin/bash
 hello() {
-  echo ’Hello, World’
+  echo ’Hello World’
 }
 test_hello() {
-  assertEquals "$(hello)" ’Hello, World’
+  assertEquals "$(hello)" ’Hello World’
 }
 
 #source "/usr/share/shunit2/shunit2"
