@@ -19,7 +19,7 @@ build:
     - sudo apt-get install stress
     - echo "starting the stress test"
     - uptime
-    - stress -t 600 -m 20 --vm-hang 5
+    - stress -t 60 -m 20 --vm-hang 5
     - uptime
     - echo "finished the stress test"
     - echo "$USER"
