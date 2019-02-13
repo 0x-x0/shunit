@@ -1,45 +1,16 @@
+
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/python:3.6
+    machine: true
     steps:
       - checkout
       - run:
-          name: Run pre-commit to check lint, pydocstyle
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install pre-commit --user
-            pre-commit run --all-files
+        name: install dependencies
+        command: |
+          curl https://pre-commit.com/install-local.py | python -
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#      version: 2
-#      jobs:
-#        build:
-#          machine: true
-#      steps:
-#        - checkout
-#      - run:
-#        name: install dependencies
-#        command: |
-#          uname -a
-#
-#      - run:
-#        name: Run pre-commit to check lint, pydocstyle
-#        command: |
-#          echo "another run"
+      - run:
+        name: Run pre-commit to check lint, pydocstyle
+        command: |
+          pre-commit run --all-files
