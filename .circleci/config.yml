@@ -8,6 +8,9 @@ jobs:
       - run:
           name: install dependencies
           command: |
+            wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
+            unzip terraform_0.11.11_linux_amd64.zip
+            mv terraform /usr/local/bin/
             curl https://pre-commit.com/install-local.py | python -
 
       - run:
