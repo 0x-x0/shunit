@@ -1,7 +1,16 @@
+version: 2
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.4.1
-        steps:
-          - checkout
-          - run: echo "A first hello"
+      - image: circleci/python:3.6
+    steps:
+      - checkout
+      - run:
+          name: install dependencies
+          command: |
+            echo Failed waiting for Rabbitmq
+
+      - run:
+          name: Run pre-commit to check lint, pydocstyle
+          command: |
+            echo "another run"
