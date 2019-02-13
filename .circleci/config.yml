@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    machine:
+      enabled: true
+
+      working_directory: ~/repo
+
+      steps:
+        - checkout
+
+        - run:
+          name: Run pre-commit to check lint
+          command: |
+            pre-commit run --all-files
