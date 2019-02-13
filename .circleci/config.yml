@@ -6,11 +6,11 @@ jobs:
     steps:
       - checkout
       - run:
-        name: install dependencies
-        command: |
-          curl https://pre-commit.com/install-local.py | python -
+          name: install dependencies
+          command: |
+            curl https://pre-commit.com/install-local.py | python -
 
       - run:
-        name: Run pre-commit to check lint, pydocstyle
-        command: |
-          pre-commit run --all-files
+          name: Run pre-commit to check lint, pydocstyle
+          command: |
+            pre-commit run --all-files
