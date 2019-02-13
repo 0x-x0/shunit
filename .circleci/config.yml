@@ -7,7 +7,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            echo Failed waiting for Rabbitmq
+            uname -a
 
       - run:
           name: Run pre-commit to check lint, pydocstyle
